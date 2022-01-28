@@ -1,0 +1,2813 @@
+HDF5 "../../module0_flow_tutorial/tutorial/module0_flow/larndsim.example.out.h5" {
+GROUP "/" {
+   GROUP "charge" {
+      GROUP "events" {
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ext_trigs_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "hits_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "source_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U64LE "id";
+               H5T_STD_U32LE "nhit";
+               H5T_IEEE_F64LE "q";
+               H5T_IEEE_F64LE "ts_start";
+               H5T_IEEE_F64LE "ts_end";
+               H5T_STD_U32LE "n_ext_trigs";
+               H5T_STD_U64LE "unix_ts";
+            }
+            DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "ext_trigs" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 4734, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "hits" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 696485, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "raw_events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "combined" {
+               GROUP "t0" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 2446, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "tracklets" {
+                  GROUP "merged" {
+                     DATASET "ref" {
+                        DATATYPE  H5T_STD_U64LE
+                        DATASPACE  SIMPLE { ( 5834, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                        ATTRIBUTE "dset0" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "dset1" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "ref_region0" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "ref_region1" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                     DATASET "ref_region" {
+                        DATATYPE  H5T_COMPOUND {
+                           H5T_STD_I64LE "start";
+                           H5T_STD_I64LE "stop";
+                        }
+                        DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                        ATTRIBUTE "ref" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                  }
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 8277, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "ext_trigs" {
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "larpix_trigger_channels" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               } "key";
+               H5T_VLEN { H5T_STD_U8LE} "val";
+            }
+            DATASPACE  SIMPLE { ( 0 ) / ( 0 ) }
+         }
+         ATTRIBUTE "packets_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "pacman_trigger_enabled" {
+            DATATYPE  H5T_ENUM {
+               H5T_STD_I8LE;
+               "FALSE"            0;
+               "TRUE"             1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "pacman_trigger_word_filter" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "source_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ts_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U64LE "id";
+               H5T_IEEE_F64LE "ts";
+               H5T_STD_U64LE "ts_raw";
+               H5T_STD_I16LE "type";
+               H5T_STD_U8LE "iogroup";
+            }
+            DATASPACE  SIMPLE { ( 4734 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 4734 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "raw_events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 4734 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "hits" {
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "configuration_file" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "packets_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "pedestal_file" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "source_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ts_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U32LE "id";
+               H5T_IEEE_F64LE "px";
+               H5T_IEEE_F64LE "py";
+               H5T_IEEE_F64LE "ts";
+               H5T_STD_U64LE "ts_raw";
+               H5T_IEEE_F64LE "q";
+               H5T_STD_U8LE "iogroup";
+               H5T_STD_U8LE "iochannel";
+               H5T_STD_U8LE "chipid";
+               H5T_STD_U8LE "channelid";
+               H5T_STD_I64LE "geom";
+            }
+            DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "packets" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 696485, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "raw_events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "combined" {
+               GROUP "hit_drift" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 696485, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "tracklets" {
+                  GROUP "merged" {
+                     DATASET "ref_region" {
+                        DATATYPE  H5T_COMPOUND {
+                           H5T_STD_I64LE "start";
+                           H5T_STD_I64LE "stop";
+                        }
+                        DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                        ATTRIBUTE "ref" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "packets" {
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U8LE "io_group";
+               H5T_STD_U8LE "io_channel";
+               H5T_STD_U8LE "chip_id";
+               H5T_STD_U8LE "packet_type";
+               H5T_STD_U8LE "downstream_marker";
+               H5T_STD_U8LE "parity";
+               H5T_STD_U8LE "valid_parity";
+               H5T_STD_U8LE "channel_id";
+               H5T_STD_U64LE "timestamp";
+               H5T_STD_U8LE "dataword";
+               H5T_STD_U8LE "trigger_type";
+               H5T_STD_U8LE "local_fifo";
+               H5T_STD_U8LE "shared_fifo";
+               H5T_STD_U8LE "register_address";
+               H5T_STD_U8LE "register_data";
+               H5T_STD_U8LE "direction";
+               H5T_STD_U8LE "local_fifo_events";
+               H5T_STD_U16LE "shared_fifo_events";
+               H5T_STD_U32LE "counter";
+               H5T_STD_U8LE "fifo_diagnostics_enabled";
+               H5T_STD_U8LE "first_packet";
+               H5T_STD_U32LE "receipt_timestamp";
+            }
+            DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "hits" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "packets_corr_ts" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 701219, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "raw_events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "mc_truth" {
+               GROUP "packet_fraction" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 1826813, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "tracks" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 1826813, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "packets_corr_ts" {
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "correction" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U8LE "iogroup";
+               H5T_IEEE_F64LE "offset";
+               H5T_IEEE_F64LE "slope";
+            }
+            DATASPACE  SIMPLE { ( 0 ) / ( 0 ) }
+         }
+         ATTRIBUTE "packets_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "source_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U64LE "id";
+               H5T_IEEE_F64LE "ts";
+            }
+            DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "packets" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 701219 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "raw_events" {
+         ATTRIBUTE "buffer_size" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "end_position" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "event_builder_class" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "event_builder_class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "input_filename" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mc_packet_fraction_dset_name" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mc_tracks_dset_name" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "mc_trajectories_dset_name" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "nhit_cut" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "packets_dset_name" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "rollover_ticks" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "start_position" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "sync_noise_cut" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
+         }
+         ATTRIBUTE "sync_noise_cut_enabled" {
+            DATATYPE  H5T_ENUM {
+               H5T_STD_I8LE;
+               "FALSE"            0;
+               "TRUE"             1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "threshold" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "window" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U64LE "id";
+               H5T_STD_U64LE "unix_ts";
+            }
+            DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "events" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 2446, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "ext_trigs" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 4734, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "hits" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 696485, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "packets" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 701219, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "mc_truth" {
+               GROUP "events" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 2463, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   GROUP "combined" {
+      GROUP "hit_drift" {
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U32LE "id";
+               H5T_IEEE_F64LE "t_drift";
+               H5T_IEEE_F64LE "d_drift";
+               H5T_IEEE_F64LE "z";
+            }
+            DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "hits" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 696485 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "t0" {
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ext_trigs_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "hits_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "light_hits_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "source_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "t0_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "type_lookup" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U8LE "NONE";
+               H5T_STD_U8LE "EXT_TRIG";
+               H5T_STD_U8LE "LIGHT_MATCHED";
+            }
+            DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U32LE "id";
+               H5T_IEEE_F64LE "ts";
+               H5T_IEEE_F64LE "ts_err";
+               H5T_STD_U8LE "type";
+            }
+            DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 2446 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "tracklets" {
+         ATTRIBUTE "class_version" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "classname" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "dbscan_eps" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "dbscan_min_samples" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "hit_drift_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "hits_dset" {
+            DATATYPE  H5T_STRING {
+               STRSIZE H5T_VARIABLE;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_UTF8;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "max_iterations" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "max_nhit" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ransac_max_trials" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ransac_min_samples" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "ransac_residual_threshold" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "trajectory_dx" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         ATTRIBUTE "trajectory_pts" {
+            DATATYPE  H5T_STD_I64LE
+            DATASPACE  SCALAR
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U32LE "id";
+               H5T_IEEE_F64LE "theta";
+               H5T_IEEE_F64LE "phi";
+               H5T_IEEE_F64LE "xp";
+               H5T_IEEE_F64LE "yp";
+               H5T_STD_I64LE "nhit";
+               H5T_IEEE_F64LE "q";
+               H5T_IEEE_F64LE "ts_start";
+               H5T_IEEE_F64LE "ts_end";
+               H5T_ARRAY { [3] H5T_IEEE_F64LE } "residual";
+               H5T_IEEE_F64LE "length";
+               H5T_ARRAY { [3] H5T_IEEE_F64LE } "start";
+               H5T_ARRAY { [3] H5T_IEEE_F64LE } "end";
+               H5T_ARRAY { [8][3] H5T_IEEE_F64LE } "trajectory";
+               H5T_ARRAY { [7] H5T_IEEE_F64LE } "trajectory_residual";
+               H5T_ARRAY { [7][3] H5T_IEEE_F64LE } "dx";
+               H5T_ARRAY { [7] H5T_IEEE_F64LE } "dq";
+               H5T_ARRAY { [7] H5T_STD_I64LE } "dn";
+            }
+            DATASPACE  SIMPLE { ( 8277 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "merged" {
+            ATTRIBUTE "class_version" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "classname" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "hit_drift_dset" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "hits_dset" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "max_neighbors" {
+               DATATYPE  H5T_STD_I64LE
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "pdf_bkg_name" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "pdf_filename" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "pdf_sig_name" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "pvalue_cut" {
+               DATATYPE  H5T_IEEE_F64LE
+               DATASPACE  SCALAR
+            }
+            ATTRIBUTE "tracks_dset" {
+               DATATYPE  H5T_STRING {
+                  STRSIZE H5T_VARIABLE;
+                  STRPAD H5T_STR_NULLTERM;
+                  CSET H5T_CSET_UTF8;
+                  CTYPE H5T_C_S1;
+               }
+               DATASPACE  SCALAR
+            }
+            DATASET "data" {
+               DATATYPE  H5T_COMPOUND {
+                  H5T_STD_U32LE "id";
+                  H5T_IEEE_F64LE "theta";
+                  H5T_IEEE_F64LE "phi";
+                  H5T_IEEE_F64LE "xp";
+                  H5T_IEEE_F64LE "yp";
+                  H5T_STD_I64LE "nhit";
+                  H5T_IEEE_F64LE "q";
+                  H5T_IEEE_F64LE "ts_start";
+                  H5T_IEEE_F64LE "ts_end";
+                  H5T_ARRAY { [3] H5T_IEEE_F64LE } "residual";
+                  H5T_IEEE_F64LE "length";
+                  H5T_ARRAY { [3] H5T_IEEE_F64LE } "start";
+                  H5T_ARRAY { [3] H5T_IEEE_F64LE } "end";
+                  H5T_ARRAY { [8][3] H5T_IEEE_F64LE } "trajectory";
+                  H5T_ARRAY { [7] H5T_IEEE_F64LE } "trajectory_residual";
+                  H5T_ARRAY { [7][3] H5T_IEEE_F64LE } "dx";
+                  H5T_ARRAY { [7] H5T_IEEE_F64LE } "dq";
+                  H5T_ARRAY { [7] H5T_STD_I64LE } "dn";
+               }
+               DATASPACE  SIMPLE { ( 5834 ) / ( H5S_UNLIMITED ) }
+            }
+            GROUP "ref" {
+               GROUP "charge" {
+                  GROUP "events" {
+                     DATASET "ref_region" {
+                        DATATYPE  H5T_COMPOUND {
+                           H5T_STD_I64LE "start";
+                           H5T_STD_I64LE "stop";
+                        }
+                        DATASPACE  SIMPLE { ( 5834 ) / ( H5S_UNLIMITED ) }
+                        ATTRIBUTE "ref" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                  }
+                  GROUP "hits" {
+                     DATASET "ref" {
+                        DATATYPE  H5T_STD_U64LE
+                        DATASPACE  SIMPLE { ( 675993, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                        ATTRIBUTE "dset0" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "dset1" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "ref_region0" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "ref_region1" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                     DATASET "ref_region" {
+                        DATATYPE  H5T_COMPOUND {
+                           H5T_STD_I64LE "start";
+                           H5T_STD_I64LE "stop";
+                        }
+                        DATASPACE  SIMPLE { ( 5834 ) / ( H5S_UNLIMITED ) }
+                        ATTRIBUTE "ref" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                  }
+               }
+               GROUP "combined" {
+                  GROUP "tracklets" {
+                     DATASET "ref" {
+                        DATATYPE  H5T_STD_U64LE
+                        DATASPACE  SIMPLE { ( 8277, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                        ATTRIBUTE "dset0" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "dset1" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "ref_region0" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                        ATTRIBUTE "ref_region1" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                     DATASET "ref_region" {
+                        DATATYPE  H5T_COMPOUND {
+                           H5T_STD_I64LE "start";
+                           H5T_STD_I64LE "stop";
+                        }
+                        DATASPACE  SIMPLE { ( 5834 ) / ( H5S_UNLIMITED ) }
+                        ATTRIBUTE "ref" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 8277 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "hits" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 675993, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 8277 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "combined" {
+               GROUP "tracklets" {
+                  GROUP "merged" {
+                     DATASET "ref_region" {
+                        DATATYPE  H5T_COMPOUND {
+                           H5T_STD_I64LE "start";
+                           H5T_STD_I64LE "stop";
+                        }
+                        DATASPACE  SIMPLE { ( 8277 ) / ( H5S_UNLIMITED ) }
+                        ATTRIBUTE "ref" {
+                           DATATYPE  H5T_STRING {
+                              STRSIZE H5T_VARIABLE;
+                              STRPAD H5T_STR_NULLTERM;
+                              CSET H5T_CSET_UTF8;
+                              CTYPE H5T_C_S1;
+                           }
+                           DATASPACE  SCALAR
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   GROUP "disabled_channels" {
+      GROUP "lut" {
+         ATTRIBUTE "meta" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ARRAY { [3][2] H5T_STD_I64LE } "min_max_keys";
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "default";
+            }
+            DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "data";
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "filled";
+            }
+            DATASPACE  SIMPLE { ( 1533883 ) / ( H5S_UNLIMITED ) }
+         }
+      }
+      GROUP "xy" {
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_IEEE_F64LE "x";
+               H5T_IEEE_F64LE "y";
+            }
+            DATASPACE  SIMPLE { ( 6959 ) / ( H5S_UNLIMITED ) }
+         }
+      }
+   }
+   GROUP "geometry_info" {
+      ATTRIBUTE "class_version" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "classname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "crs_geometry_file" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "pixel_pitch" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      GROUP "anode_z" {
+         ATTRIBUTE "meta" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ARRAY { [1][2] H5T_STD_I64LE } "min_max_keys";
+               H5T_IEEE_F32LE "default";
+            }
+            DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_IEEE_F32LE "data";
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "filled";
+            }
+            DATASPACE  SIMPLE { ( 17 ) / ( H5S_UNLIMITED ) }
+         }
+      }
+      GROUP "drift_dir" {
+         ATTRIBUTE "meta" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ARRAY { [1][2] H5T_STD_I64LE } "min_max_keys";
+               H5T_STD_I8LE "default";
+            }
+            DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_I8LE "data";
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "filled";
+            }
+            DATASPACE  SIMPLE { ( 17 ) / ( H5S_UNLIMITED ) }
+         }
+      }
+      GROUP "pixel_xy" {
+         ATTRIBUTE "meta" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ARRAY { [4][2] H5T_STD_I64LE } "min_max_keys";
+               H5T_ARRAY { [2] H5T_IEEE_F32LE } "default";
+            }
+            DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ARRAY { [2] H5T_IEEE_F32LE } "data";
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "filled";
+            }
+            DATASPACE  SIMPLE { ( 409601 ) / ( H5S_UNLIMITED ) }
+         }
+      }
+      GROUP "tile_id" {
+         ATTRIBUTE "meta" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_ARRAY { [2][2] H5T_STD_I64LE } "min_max_keys";
+               H5T_STD_I32LE "default";
+            }
+            DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+         }
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_I32LE "data";
+               H5T_ENUM {
+                  H5T_STD_I8LE;
+                  "FALSE"            0;
+                  "TRUE"             1;
+               } "filled";
+            }
+            DATASPACE  SIMPLE { ( 65 ) / ( H5S_UNLIMITED ) }
+         }
+      }
+   }
+   GROUP "lar_info" {
+      ATTRIBUTE "class_version" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "classname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "density" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "electron_lifetime_central_value" {
+         DATATYPE  H5T_COMPOUND {
+            H5T_IEEE_F64LE "unix_s";
+            H5T_IEEE_F64LE "lt_us";
+         }
+         DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
+      }
+      ATTRIBUTE "electron_lifetime_lower_bound" {
+         DATATYPE  H5T_COMPOUND {
+            H5T_IEEE_F64LE "unix_s";
+            H5T_IEEE_F64LE "lt_us";
+         }
+         DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
+      }
+      ATTRIBUTE "electron_lifetime_upper_bound" {
+         DATATYPE  H5T_COMPOUND {
+            H5T_IEEE_F64LE "unix_s";
+            H5T_IEEE_F64LE "lt_us";
+         }
+         DATASPACE  SIMPLE { ( 2 ) / ( 2 ) }
+      }
+      ATTRIBUTE "electron_mobility_params" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SIMPLE { ( 6 ) / ( 6 ) }
+      }
+      ATTRIBUTE "ionization_w" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "v_drift" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+   }
+   GROUP "mc_truth" {
+      GROUP "events" {
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U64LE "id";
+            }
+            DATASPACE  SIMPLE { ( 9877 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "raw_events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 9877 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "mc_truth" {
+               GROUP "tracks" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 403036, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 9877 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "trajectories" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 46198, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 9877 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "packet_fraction" {
+         DATASET "data" {
+            DATATYPE  H5T_IEEE_F64LE
+            DATASPACE  SIMPLE { ( 1826813 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "packets" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 1826813 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "tracks" {
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U32LE "eventID";
+               H5T_IEEE_F32LE "z_end";
+               H5T_STD_U32LE "trackID";
+               H5T_IEEE_F32LE "tran_diff";
+               H5T_IEEE_F32LE "z_start";
+               H5T_IEEE_F32LE "x_end";
+               H5T_IEEE_F32LE "y_end";
+               H5T_STD_U32LE "n_electrons";
+               H5T_STD_I32LE "pdgId";
+               H5T_IEEE_F32LE "x_start";
+               H5T_IEEE_F32LE "y_start";
+               H5T_IEEE_F32LE "t_start";
+               H5T_IEEE_F32LE "dx";
+               H5T_IEEE_F32LE "long_diff";
+               H5T_STD_U32LE "pixel_plane";
+               H5T_IEEE_F32LE "t_end";
+               H5T_IEEE_F32LE "dEdx";
+               H5T_IEEE_F32LE "dE";
+               H5T_IEEE_F32LE "t";
+               H5T_IEEE_F32LE "y";
+               H5T_IEEE_F32LE "x";
+               H5T_IEEE_F32LE "z";
+               H5T_IEEE_F32LE "n_photons";
+            }
+            DATASPACE  SIMPLE { ( 403036 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "charge" {
+               GROUP "packets" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 403036 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+            GROUP "mc_truth" {
+               GROUP "events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 403036 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "trajectories" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 403036 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+      GROUP "trajectories" {
+         DATASET "data" {
+            DATATYPE  H5T_COMPOUND {
+               H5T_STD_U32LE "eventID";
+               H5T_STD_U32LE "trackID";
+               H5T_STD_I32LE "parentID";
+               H5T_ARRAY { [3] H5T_IEEE_F32LE } "pxyz_start";
+               H5T_ARRAY { [3] H5T_IEEE_F32LE } "xyz_start";
+               H5T_IEEE_F32LE "t_start";
+               H5T_ARRAY { [3] H5T_IEEE_F32LE } "pxyz_end";
+               H5T_ARRAY { [3] H5T_IEEE_F32LE } "xyz_end";
+               H5T_IEEE_F32LE "t_end";
+               H5T_STD_I32LE "pdgId";
+               H5T_STD_U32LE "start_process";
+               H5T_STD_U32LE "start_subprocess";
+               H5T_STD_U32LE "end_process";
+               H5T_STD_U32LE "end_subprocess";
+            }
+            DATASPACE  SIMPLE { ( 46198 ) / ( H5S_UNLIMITED ) }
+         }
+         GROUP "ref" {
+            GROUP "mc_truth" {
+               GROUP "events" {
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 46198 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+               GROUP "tracks" {
+                  DATASET "ref" {
+                     DATATYPE  H5T_STD_U64LE
+                     DATASPACE  SIMPLE { ( 403036, 2 ) / ( H5S_UNLIMITED, 2 ) }
+                     ATTRIBUTE "dset0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "dset1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region0" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                     ATTRIBUTE "ref_region1" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+                  DATASET "ref_region" {
+                     DATATYPE  H5T_COMPOUND {
+                        H5T_STD_I64LE "start";
+                        H5T_STD_I64LE "stop";
+                     }
+                     DATASPACE  SIMPLE { ( 46198 ) / ( H5S_UNLIMITED ) }
+                     ATTRIBUTE "ref" {
+                        DATATYPE  H5T_STRING {
+                           STRSIZE H5T_VARIABLE;
+                           STRPAD H5T_STR_NULLTERM;
+                           CSET H5T_CSET_UTF8;
+                           CTYPE H5T_C_S1;
+                        }
+                        DATASPACE  SCALAR
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   GROUP "run_info" {
+      ATTRIBUTE "charge_filename" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "charge_filename_default" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "charge_thresholds" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "charge_thresholds_default" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "class_version" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "classname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "crs_ticks" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "crs_ticks_default" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "e_field" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "e_field_default" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "is_mc" {
+         DATATYPE  H5T_ENUM {
+            H5T_STD_I8LE;
+            "FALSE"            0;
+            "TRUE"             1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "is_mc_default" {
+         DATATYPE  H5T_ENUM {
+            H5T_STD_I8LE;
+            "FALSE"            0;
+            "TRUE"             1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "light_filename" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "light_filename_default" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "light_samples" {
+         DATATYPE  H5T_STD_I64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "light_samples_default" {
+         DATATYPE  H5T_STD_I64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "lrs_ticks" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "lrs_ticks_default" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "runlist_file" {
+         DATATYPE  H5T_STRING {
+            STRSIZE H5T_VARIABLE;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_UTF8;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+      }
+   }
+}
+}
