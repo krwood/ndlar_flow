@@ -1,3 +1,10 @@
+
+Adaptation of module0_flow for use in full ndlar simulations, featuring the full multi-module geometry.
+
+README for module0_flow below.
+
+---------------------------------------
+
 .. image:: https://readthedocs.org/projects/module0-flow/badge/?version=latest
     :target: https://module0-flow.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
