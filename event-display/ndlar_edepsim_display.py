@@ -6,12 +6,14 @@ import yaml
 import sys
 import argparse
 import matplotlib.pyplot as plt
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
 
 import plotly.graph_objects as go
 from plotly import subplots
 
 import plotly.io as pio
-pio.kaleido.scope.mathjax = None
+#pio.kaleido.scope.mathjax = None
 
 
 from particle import Particle
@@ -20,8 +22,8 @@ from larndsim import consts
 from collections import defaultdict
 from larndsim.consts import detector, physics
 
-_default_path_to_geometry = "larndsim/detector_properties/ndlar-module.yaml"
-_default_path_to_pixels = "larndsim/pixel_layouts/multi_tile_layout-3.0.40.yaml"
+_default_path_to_geometry = "../../larnd-sim/larndsim/detector_properties/ndlar-module.yaml"
+_default_path_to_pixels = "../../larnd-sim/larndsim/pixel_layouts/multi_tile_layout-3.0.40.yaml"
 
 class DetectorGeometry():
     def __init__(self, detector_properties, pixel_layout):
@@ -104,6 +106,22 @@ class DetectorGeometry():
             return np.nan
 
         return tile_id
+
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        FancyArrowPatch.__init__(self, (0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+
+    def draw(self, renderer):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, renderer.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        FancyArrowPatch.draw(self, renderer)
+
+    def do_3d_projection(self, renderer):
+        self.draw(renderer)
+        return 0
+
 
 drawn = []
 fig = go.Figure(drawn)
@@ -287,8 +305,11 @@ def set_axes_equal(ax, bounds):
     ax.set_ylim3d([y_middle - plot_radius, y_middle + plot_radius])
     ax.set_zlim3d([z_middle - plot_radius, z_middle + plot_radius])
 
-def plot_hits_plt(segments, min_time, max_time):
+def plot_hits_plt(segments, min_time, max_time, figfile):
     xs, ys, zs, cs, ss = [], [], [], [], []
+    fid_evtids = []
+    color_list = ['#ff0000','#00ff00','#0000ff','#ff00ff','#00ffff','#59d354','#5954d8','#aaa5bf','#d3ce87','#ddba87','#bc9e82','#c6997c','#bf8277','#ce5e60','#aa8e93','#a5777a','#936870','#d35954','#9200ff','#84c1a3','#89a8a0','#829e8c','#adbcc6']
+
     new_color_dict = {186186 : '#ff0000',
                         7432 : '#00ff00',
                         163063 : '#0000ff',
@@ -301,7 +322,7 @@ def plot_hits_plt(segments, min_time, max_time):
                         150201 : '#ddba87'}
     
     new_color_dict = defaultdict(lambda: 'gray', new_color_dict)
-    npts = 5
+    npts = 10
     z_bounds = [-356.7, 356.7]
     y_bounds = [-148.613, 155.387]
     x_bounds = [413.72, 916.68]
@@ -315,13 +336,22 @@ def plot_hits_plt(segments, min_time, max_time):
             continue
 
         disp = np.array([segment['z_start']-segment['z_end'], segment['x_start']-segment['x_end'], segment['y_start']-segment['y_end']])
-        npts = int(np.linalg.norm(disp)*10)
+        npts = int(np.linalg.norm(disp)*20)
 
         xs += list(np.linspace(segment['z_start'], segment['z_end'], npts))
         ys += list(np.linspace(segment['x_start'], segment['x_end'], npts))
         zs += list(np.linspace(segment['y_start'], segment['y_end'], npts))
         ss += list([0.3]*npts)
-        cs += list([new_color_dict[segment['eventID']]]*npts)
+
+        if segment['eventID'] in fid_evtids:
+            this_color = color_list[fid_evtids.index(segment['eventID'])]
+        elif segment['fiducial']:
+            this_color = color_list[len(fid_evtids)]
+            fid_evtids += [segment['eventID']]
+        else:
+            #this_color = 'gray'
+            this_color = 'black'
+        cs += list([this_color]*npts)
 
     fig = plt.figure()
     ax = fig.add_subplot(projection='3d')
@@ -329,10 +359,22 @@ def plot_hits_plt(segments, min_time, max_time):
 
     lines = get_geometry_frame()
     for line in lines:
+        if (abs(line[2][0]-line[2][1])>0.5):
+             print("y:",line[2][0],line[2][1])
         fxs = np.linspace(line[0][0], line[0][1], 100)
         fys = np.linspace(line[1][0], line[1][1], 100)
         fzs = np.linspace(line[2][0], line[2][1], 100)
         ax.plot3D(fxs, fys, fzs, color='gray', linewidth=0.5, alpha=0.7)
+
+    # draw arrow for beam direction
+    a = Arrow3D([100.,300.], [0.,0.], 
+                [10.,-10.], mutation_scale=20, 
+                lw=3, arrowstyle="-|>", color="purple")
+    a.set_zorder(-1)
+    ax.add_artist(a)
+    ax.text(120.,5.,5.,r'$\nu$-beam',(1,0,-0.1),color='purple',weight='bold')
+    
+
     # Get rid of colored axes planes
     # First remove fill
     ax.xaxis.pane.fill = False
@@ -340,15 +382,28 @@ def plot_hits_plt(segments, min_time, max_time):
     ax.zaxis.pane.fill = False
     set_axes_equal(ax, bounds)
 
+    ax.set_xlabel('z [cm]',size=12,weight='bold')
+    ax.set_ylabel('x [cm]',size=12,weight='bold')
+    ax.set_zlabel('y [cm]',size=12,weight='bold')
+
     # Now set color to white (or whatever is "invisible")
-    ax.xaxis.pane.set_edgecolor('w')
-    ax.yaxis.pane.set_edgecolor('w')
-    ax.zaxis.pane.set_edgecolor('w')
-    ax.set_axis_off()
+    #ax.xaxis.pane.set_edgecolor('w')
+    #ax.yaxis.pane.set_edgecolor('w')
+    #ax.zaxis.pane.set_edgecolor('w')
+    #ax.set_axis_off()
+
+    fig.subplots_adjust(left=-0.9,right=1.9,bottom=0.05,top=1.05)
 
     # Bonus: To get rid of the grid as well:
     ax.grid(False)
-    plt.show()
+    plt.savefig(figfile)
+    #plt.show()
+
+    ax.view_init(90,-90)
+    plt.savefig(figfile+"_birdseye")
+
+    ax.view_init(0,-90)
+    plt.savefig(figfile+"_sideview")
 
 
 def plot_hits(segments, min_time, max_time):
@@ -503,8 +558,10 @@ def main(filename, min_time, max_time, path_to_geometry, path_to_pixels, event_i
     track_ids = np.unique(tracks['trackID'])[1:]
     segment_ids = np.unique(segments['trackID'])[1:]
     #drawn_objects.extend(plot_tracks(track_ids, 0))
+    figfile = filename.split(".h5",1)[0]
     if not draw_plotly:
-        plot_hits_plt(good_segments, min_time, max_time)
+
+        plot_hits_plt(good_segments, min_time, max_time, figfile)
         return
 
     if not draw_mc:
