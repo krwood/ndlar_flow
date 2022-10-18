@@ -25,32 +25,30 @@ def maybe_fetch_from_url(pytestconfig, tmp_path_factory, url):
     except FileExistsError:
         dest = os.path.join(tmp_path_factory.getbasetemp(), 'module0_flow')
 
+    cached_filepath = os.path.join(dest, file)
+    src_filepath = os.path.join(src, file) if src is not None else None
+    dest_filepath = os.path.join('./h5flow_data/', file)
+
     # check if file exists in current cache
-    if not os.path.exists(os.path.join(dest, file)):
-        if src is None or not os.path.exists(os.path.join(src, file)):
+    if not os.path.exists(cached_filepath):
+        if src_filepath is None or not os.path.exists(src_filepath):
             # copy from url
             print(f'Downloading {file} from {url}...')
-            subprocess.run(['curl', '-f', '-o', os.path.join(dest, file), url],
-                           check=True)
+            subprocess.run(['curl', '-f', '-o', cached_filepath, url], check=True)
         else:
             # copy from old cache
-            print(f'Copying {file} from existing cache '
-                  f'{os.path.join(src, file)}...')
-            shutil.copy(os.path.join(src, file), os.path.join(dest, file))
-        print(f'Saved to current cache @ {os.path.join(dest, file)}')
-
+            print(f'Copying {file} from existing cache {src_filepath}...')
+            shutil.copy(os.path.join(src, file), cached_filepath)
+        print(f'Saved to current cache @ {cached_filepath}')
         pytestconfig.cache.set(f'cached_{url}', str(dest))
 
-    # copy file from current cache to cwd
-    if os.path.exists(file):
-        os.remove(file)
-    shutil.copy(os.path.join(dest, file), './')
+    # copy file from current cache to current h5flow data directory
+    if os.path.exists(dest_filepath):
+        print(f'Overwriting {dest_filepath}...')
+        os.remove(dest_filepath)
+    shutil.copy(cached_filepath, dest_filepath)
 
-    yield file
-
-    # cleanup
-    if os.path.exists(file):
-        os.remove(file)
+    yield dest_filepath
 
 
 @pytest.fixture(params=[
@@ -82,6 +80,14 @@ def geometry_file(pytestconfig, tmp_path_factory):
                                      ('https://portal.nersc.gov/project/dune/'
                                       'data/Module0/'
                                       'multi_tile_layout-2.2.16.yaml')))
+
+
+@ pytest.fixture
+def light_geometry_file(pytestconfig, tmp_path_factory):
+    return next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
+                                     ('https://portal.nersc.gov/project/dune/'
+                                      'data/Module0/'
+                                      'light_module_desc-0.0.0.yaml')))
 
 
 @ pytest.fixture
@@ -129,7 +135,34 @@ def track_merging_pdf_file(pytestconfig, tmp_path_factory):
     return next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
                                      ('https://portal.nersc.gov/project/dune/'
                                       'data/Module0/merged/reco_data/'
-                                      'joint_pdf-2_0_1.npz')))
+                                      'joint_pdf-3_0_0.npz')))
+
+@pytest.fixture
+def michel_pdf_file(pytestconfig, tmp_path_factory):
+    return next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
+                                     ('https://portal.nersc.gov/project/dune/'
+                                      'data/Module0/merged/reco_data/'
+                                      'michel_pdf-0.1.0.npz')))
+
+@pytest.fixture
+def triplet_response_data_256_file(pytestconfig, tmp_path_factory):
+    rv = next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
+                                     ('https://portal.nersc.gov/project/dune/'
+                                      'data/Module0/merged/reco_data/'
+                                      'mod0_response.v0.data.256.npz')))
+    if not os.path.exists('h5flow_data/mod0_response.data.256.npz'):
+        os.rename(rv, 'h5flow_data/mod0_response.data.256.npz')    
+    return rv
+
+@pytest.fixture
+def triplet_response_sim_256_file(pytestconfig, tmp_path_factory):
+    rv = next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
+                                     ('https://portal.nersc.gov/project/dune/'
+                                      'data/Module0/merged/reco_data/'
+                                      'mod0_response.v1.sim.256.npz')))
+    if not os.path.exists('h5flow_data/mod0_response.sim.256.npz'):
+        os.rename(rv, 'h5flow_data/mod0_response.sim.256.npz')
+    return rv
 
 
 @ pytest.fixture
@@ -145,7 +178,7 @@ def electron_lifetime_file(pytestconfig, tmp_path_factory):
     return next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
                                      ('https://portal.nersc.gov/project/dune/'
                                       'data/Module0/electronLifetime/'
-                                      'ElecLifetimeFit_Module0.root')))
+                                      'ElecLifetimeFit_Module0.npz')))
 
 
 @ pytest.fixture
@@ -160,8 +193,8 @@ def muon_range_table(pytestconfig, tmp_path_factory):
 def light_noise_file(pytestconfig, tmp_path_factory):
     return next(maybe_fetch_from_url(pytestconfig, tmp_path_factory,
                                      ('https://portal.nersc.gov/project/dune/'
-                                      'data/Module0-Run2/LRS/LED/'
-                                      'rwf_20210624_094156.fwvfm.noise_power.npz')))
+                                      'data/Module0/merged/reco_data/'
+                                      'events_2021_04_10_04_21_27_CEST.fwvfm.noise_power.npz')))
 
 
 @ pytest.fixture
