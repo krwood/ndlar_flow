@@ -6,6 +6,7 @@ workflow documentation
 .. toctree::
 
    workflows
+   inputs
 
 module documentation
 ====================
@@ -16,7 +17,7 @@ resources
 .. toctree::
    :maxdepth: 1
 
-   resources
+   resources.rst
 
 reconstruction
 --------------
@@ -50,4 +51,4 @@ utilties
 .. toctree::
    :maxdepth: 1
 
-   utils
+   utils.rst

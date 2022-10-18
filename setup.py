@@ -11,7 +11,7 @@ setuptools.setup(name='ndlar_flow',
                  description='An h5flow-based analysis framework for (multi-module) ndlar simulation.',
                  long_description=long_description,
                  long_description_content_type='text/x-rst',
-                 author='Peter Madigan, Stephen Greenberg',
+                 author='Peter Madigan, Stephen Greenberg, Kevin Wood'
                  author_email='pmadigan@berkeley.edu, kwood@lbl.gov',
                  package_dir={'ndlar_flow': './h5flow_modules/'},
                  packages=[p.replace('h5flow_modules', 'ndlar_flow') for p in setuptools.find_packages(where='.')],
@@ -22,6 +22,6 @@ setuptools.setup(name='ndlar_flow',
                      'scipy',
                      'scikit-image',
                      'scikit-learn',
-                     'h5flow>=0.1.0'
+                     'h5flow>=0.2.0'
                  ]
                  )
